@@ -1,0 +1,66 @@
+<div class="container">
+
+  <div class="card mt-5">
+
+    <div class="card-header text-center">
+      <h2>Servidor central</h2>
+    </div>
+
+    <div class="card-body text-center">
+
+      <div class="row">
+        <div class="col-4 bg-light">
+          <p> Conectado el host: {{localHost.name}}</p>
+          <p> Proceso numero: {{localHost.id}}</p>
+        </div>
+
+        <div class="col-4">
+          <button class="btn btn-success" (click)="exitHost(localHost)">Finalizar host</button>
+        </div>
+
+        <div class="col-4">
+          <p>{{message}}</p>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+
+
+
+  <hr>
+  <div class="row">
+
+    <div class="col-4 text-center">
+      <button class="btn btn-primary" (click)="startHost('A')">Activar Host A</button>
+    </div>
+
+    <div class="col-4 text-center">
+      <button class="btn btn-primary" (click)="startHost('B')">Activar Host B</button>
+    </div>
+
+    <div class="col-4 text-center">
+      <button class="btn btn-primary" (click)="startHost('C')">Activar Host C</button>
+    </div>
+  </div>
+  <hr>
+
+  <div class="card">
+
+    <div class="card-header text-center">
+      <h2>Cola</h2>
+    </div>
+
+    <div class="card-body">
+
+      <button type="button" class="btn btn-outline-secondary ml-3" 
+      *ngFor="let host of hostsList">
+        {{host.id}}: {{host.name}}
+      </button>
+    </div>
+  </div>
+
+</div>
+
+
