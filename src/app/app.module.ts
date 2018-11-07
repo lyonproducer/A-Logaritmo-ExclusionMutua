@@ -8,7 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 
 const routes: Route[] = [
   //login Routes
-  {path: 'home', component: HomeComponent},
+  {path: '', component: HomeComponent},
 
   
 ];

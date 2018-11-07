@@ -54,10 +54,22 @@
 
     <div class="card-body">
 
-      <button type="button" class="btn btn-outline-secondary ml-3" 
-      *ngFor="let host of hostsList">
-        {{host.id}}: {{host.name}}
-      </button>
+      <div class="" style="display:inline-block" *ngFor="let host of hostsList">
+        
+        <button type="button" class="btn btn-outline-danger ml-3" 
+        *ngIf="host.active">
+         {{host.id}}: {{host.name}}
+       </button>
+
+       <button type="button" class="btn btn-outline-secondary ml-3" 
+       *ngIf="!host.active">
+         {{host.id}}: {{host.name}}
+       </button>
+
+      </div>
+
+
+
     </div>
   </div>
 
